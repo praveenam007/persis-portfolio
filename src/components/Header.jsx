@@ -7,13 +7,11 @@
  * - Dynamic description
  */
 
-import { useState } from 'react';
 import { getHeaderContent } from '../constants';
 import PerspectiveButtons from './Header/PerspectiveButtons';
 import Greeting from './Header/Greeting';
 
-export default function Header() {
-  const [isTechnical, setIsTechnical] = useState(true);
+export default function Header({ isTechnical, setIsTechnical }) {
   const { role, title, description } = getHeaderContent(isTechnical);
 
   return (
