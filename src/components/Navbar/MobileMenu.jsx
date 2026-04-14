@@ -3,6 +3,7 @@
  * Renders the mobile sidebar menu that slides in from the left
  */
 import { NAV_LINKS } from '../../constants';
+import NavIcon from './NavIcon';
 
 export default function MobileMenu({ sideMenuRef, closeMenu }) {
   return (
@@ -19,7 +20,8 @@ export default function MobileMenu({ sideMenuRef, closeMenu }) {
       {/* Mobile Navigation Links */}
       {NAV_LINKS.map((link) => (
         <li key={link.href}>
-          <a href={link.href} onClick={closeMenu}>
+          <a href={link.href} onClick={closeMenu} className="flex items-center gap-3">
+            <NavIcon name={link.icon} className="h-5 w-5" />
             {link.label}
           </a>
         </li>

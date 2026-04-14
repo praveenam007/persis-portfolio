@@ -13,8 +13,11 @@
 
 import { useState } from 'react';
 import About from './components/About';
+import Contact from './components/Contact';
 import Header from './components/Header';
 import Navbar from './components/Navbar';
+import Services from './components/Services';
+import Work from './components/Work';
 import LenisScroll from './components/LenisScroll';
 
 export default function App() {
@@ -32,6 +35,9 @@ export default function App() {
       <main>
         <Header isTechnical={isTechnical} setIsTechnical={setIsTechnical} />
         <About isTechnical={isTechnical} />
+        <Services isTechnical={isTechnical} />
+        <Work isTechnical={isTechnical} />
+        <Contact />
       </main>
     </>
   );

@@ -3,6 +3,7 @@
  * Renders the desktop navigation links with hover expand/collapse effect
  */
 import { NAV_LINKS } from '../../constants';
+import NavIcon from './NavIcon';
 
 export default function NavLinks({ isExpanded, navLinkRef }) {
   return (
@@ -17,7 +18,9 @@ export default function NavLinks({ isExpanded, navLinkRef }) {
             className="flex items-center gap-3 justify-center hover:text-gray-500 dark:hover:text-gray-300 transition py-2 px-3 rounded-lg hover:bg-white/10 dark:hover:bg-white/10 w-full"
             href={link.href}
           >
-            <span className="text-lg">{link.icon}</span>
+            <span className="text-lg">
+              <NavIcon name={link.icon} />
+            </span>
             <span className={`overflow-hidden transition-all whitespace-nowrap ${isExpanded ? 'w-auto' : 'w-0'}`}>
               {link.label}
             </span>
